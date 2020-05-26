@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.4.1/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+    <style>
+        .button{
+            background-color:#0000ff;
+            border: none; 
+            color: white;
+            padding: 7px;
+            text-align: center;
+            text-decoration: none; 
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            border: 2px solid rgba(9, 148, 28, 0.541);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        .wrap{
+            border: solid lpx #ccc;
+            padding: 10px; 
+            text-align: center;
+        }
+        .output{
+            display: inline-block; 
+            top: 4px;
+            position: relative; 
+            border: dotted lpx #ccc;
+            padding: 2px;
+        }
+        .button{
+            border:solid 2px #ccc;
+        }            
+    </style>
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+        <button class="button" ld="btnl">Model l</button>
+        <button class="button" id="btn2">Model 2</button>
+        <button class="button" ld="btn3">Model 3</button>
+        </div> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style='margin : 0px; overflow: hidden;'>   
+</body>
+<a-scene embedded arjs="debugUIEnabled: false;" vr-mode-ui="enabled: false">
+
+    <a-marker preset="hiro">
+
+        <a-entity id="entityID1" gltf-model="url(model/scene.gltf )" scale=".30 .30 .30">
+        </a-entity>
+      </a-marker>
+     <a-entity camera></a-entity>
+    </a-scene>
+
+
+    <!--Se hacen los llamados a los modelos-->
+    <script>
+        /*modelo 1*/
+        document.getElementById("btn1").addEventListener("click", (e)=>{
+                    var el = document.querySelector('#entítyID1');
+                    el.setAttríbute("obj-model", 'ob:url(logo/Log.obj);mtl:url(logo/Log.mtl');
+                    el.setAttribute("scale",'.10 .10 .10');
+        })
+        /*Modelo 2*/
+        document.getElementById("btn2").addEventlistener("click", (e)=>{
+        
+                var el = document.querySelector('tentityIDl');
+                el.setAttribute("obj-model", 'obj:url(modelhist/ForestScene.obj);mtl:url(modelhist/ForestScene.mtl)');
+                el.setAttribute("scale",'.005 .005 .005');
+        })
+        document.getElementById("btn3").addEventlistener("click", (e)=>{
+                
+                var el = document.querySelector('tentityIDl');
+                el.setAttribute("obj-model", 'obj:url(modelhist/ForestScene.obj);mtl:url(modelhist/ForestScene.mtl)');
+                el.setAttribute("scale",'.005 .005 .005');
+        })
+    </script>
+    </body>
+</html>
