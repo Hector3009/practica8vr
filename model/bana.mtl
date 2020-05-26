@@ -1,0 +1,39 @@
+newmtl MATERIAL_3_D_PRINTED_MESH_SCALES_material
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm bana/tmp_eu_thumb_f996_fda4.png
+adobe_translucence 0
+map_Pr bana/tmp_eu_thumb_755b_f148.psd
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd bana/tmp_eu_thumb_edb7_3391.png
+norm bana/tmp_eu_thumb_8170_4321.psd
+disp bana/tmp_eu_thumb_6b98_01a4.psd
+map_d bana/tmp_eu_thumb_c58c_280c.psd
+
+newmtl MATERIAL_VITRAGE_GLASS_material
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.32
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 1
+Pr 0
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd bana/tmp_eu_thumb_88d5_821b.jpg
+norm bana/tmp_eu_thumb_4cc7_9873.jpg
